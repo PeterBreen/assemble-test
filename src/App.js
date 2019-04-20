@@ -3,13 +3,17 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ShoppingCart from './shoppingcart';
 import CheckoutForm from './checkout';
 import OrderConf from './orderconf';
+import './App.css'; //for any custom style
 
 function App() {
   return (
     <Router>
-        <Route exact path="/" component={Review} />
-        <Route path="/checkout" component={Checkout} />
-        <Route path="/confirm" component={Confirm} />
+        <div className="container">
+          <div className="header"><h1>Assemble Store</h1></div>
+          <Route exact path="/" component={Review} />
+          <Route path="/checkout" component={Checkout} />
+          <Route path="/confirm" component={Confirm} />
+        </div>
     </Router>
   );
 }

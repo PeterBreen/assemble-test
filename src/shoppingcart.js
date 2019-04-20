@@ -38,9 +38,13 @@ class ShoppingCart extends React.Component {
     render() {
         return (
           <div>
-            <ul>
-            {cart.map(cart => <li key={cart.sku} > {cart.sku} - {cart.unitPrice} - {cart.name} - {cart.quantity} < /li>)}
-            </ul>
+            {cart.map(cart => <div key={cart.sku} className="row">
+              <div className="product-image col">(product image)</div>
+              <div className="product-info col"><span>{cart.name}</span><br /><span className="allcaps">SKU: {cart.sku}</span></div>
+              <div className="product-qty col">{cart.quantity}</div>
+              <div className="product-price col">${cart.quantity * cart.unitPrice}</div>
+
+            </div>)}
             <p>Subtotal: {calculateTotal(cart)}</p>
           </div>
             )
