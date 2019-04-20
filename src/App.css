@@ -16,6 +16,13 @@ button.btn-assemble:hover {
   color: #fff;
   background: #116cfb;
 }
+.cart-item {
+  margin: 3rem 0;
+}
+.cart-sku {
+  font-size: 12px;
+  color: #111;
+}
 .cartheader {
   border-bottom: 1px solid #ddd;
   padding-top: 2rem;

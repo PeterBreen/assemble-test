@@ -54,9 +54,9 @@ class ShoppingCart extends React.Component {
         return (
           <div className="page-container">
             <CartHeader />
-            {cart.map(cart => <div key={cart.sku} className="row">
+            {cart.map(cart => <div key={cart.sku} className="row cart-item">
               <div className="product-image col">(product image)</div>
-              <div className="product-info col"><span>{cart.name}</span><br /><span className="allcaps">SKU: {cart.sku}</span></div>
+              <div className="product-info col"><span>{cart.name}</span><br /><span className="allcaps cart-sku">SKU: {cart.sku}</span></div>
               <div className="product-qty col">{cart.quantity}</div>
               <div className="product-price col">${cart.quantity * cart.unitPrice}</div>
 
