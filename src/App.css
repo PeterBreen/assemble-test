@@ -29,6 +29,9 @@ button.btn-assemble:hover {
 .confirm-text {
   padding-bottom: 2rem;
 }
+.page-container {
+  padding: 0 2rem;
+}
 
 /* helper classes to avoid redeclaring repeatedly */
 .allcaps {

@@ -53,6 +53,7 @@ function ShippingAddr() {
 class CheckoutForm extends React.Component {
   render() {
     return (
+    <div className="page-container">
       <div className="row">
         <div className="col-6">
           <PaymentInfo />
@@ -63,6 +64,7 @@ class CheckoutForm extends React.Component {
             <label for="sameas">Billing address same as shipping</label>
         </div>
       </div>
+    </div>
     )
   }
 }

@@ -52,7 +52,7 @@ function CartFooter() {
 class ShoppingCart extends React.Component {
     render() {
         return (
-          <div>
+          <div className="page-container">
             <CartHeader />
             {cart.map(cart => <div key={cart.sku} className="row">
               <div className="product-image col">(product image)</div>
