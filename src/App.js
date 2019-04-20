@@ -23,7 +23,6 @@ const buttonClasses="btn btn-assemble allcaps float-right";
 function Review() {
   return (
     <div>
-      <h2>Review Your Order</h2>
       <ShoppingCart />
       <Link to="/checkout"><button className={buttonClasses}>Check Out</button></Link>
     </div>
@@ -33,7 +32,6 @@ function Review() {
 function Checkout() {
   return (
     <div>
-      <h2>Check Out</h2>
       <CheckoutForm />
       <Link to="/confirm"><button className={buttonClasses}>Order Confirmation</button></Link>
     </div>

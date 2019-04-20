@@ -16,7 +16,6 @@ button.btn-assemble:hover {
   color: #fff;
   background: #116cfb;
 }
-
 /* helper classes to avoid redeclaring repeatedly */
 .allcaps {
   text-transform: uppercase;

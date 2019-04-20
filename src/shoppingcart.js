@@ -3,6 +3,7 @@
 //each product has associated info: SKU, Price, name
 //the cart has Product data and Quantity (qty * price = total cost)
 import React from 'react';
+import './shoppingcart.css'
 
 //our data
 const cart = [{
@@ -33,11 +34,27 @@ const calculateTotal = function(cart) {
   return subtotal;
 }
 
-class ShoppingCart extends React.Component {
+function CartHeader() {
+  return (<div className="row cartheader">
+            <div className="col-6">Your Cart</div>
+            <div className="col allcaps">Quantity</div>
+            <div className="col allcaps">Price</div>
+          </div>)
+}
 
+function CartFooter() {
+  return (<div className="row cartfooter">
+            <div class="col col-6"></div>
+            <div class="col">Subtotal:</div>
+            <div class="col">{calculateTotal(cart)}</div>
+          </div>)
+}
+
+class ShoppingCart extends React.Component {
     render() {
         return (
           <div>
+            <CartHeader />
             {cart.map(cart => <div key={cart.sku} className="row">
               <div className="product-image col">(product image)</div>
               <div className="product-info col"><span>{cart.name}</span><br /><span className="allcaps">SKU: {cart.sku}</span></div>
@@ -45,7 +62,7 @@ class ShoppingCart extends React.Component {
               <div className="product-price col">${cart.quantity * cart.unitPrice}</div>
 
             </div>)}
-            <p>Subtotal: {calculateTotal(cart)}</p>
+            <CartFooter />
           </div>
             )
     }
