@@ -7,6 +7,15 @@
   font-size: 1.125rem;
   padding: 0.5rem 0.25rem;
 }
+button.btn-assemble {
+  background: #034bbd;
+  color: #fff;
+  font-size: 0.875rem;
+}
+button.btn-assemble:hover {
+  color: #fff;
+  background: #116cfb;
+}
 
 /* helper classes to avoid redeclaring repeatedly */
 .allcaps {

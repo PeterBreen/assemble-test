@@ -18,12 +18,14 @@ function App() {
   );
 }
 
+const buttonClasses="btn btn-assemble allcaps float-right";
+
 function Review() {
   return (
     <div>
       <h2>Review Your Order</h2>
       <ShoppingCart />
-      <Link to="/checkout">Check Out</Link>
+      <Link to="/checkout"><button className={buttonClasses}>Check Out</button></Link>
     </div>
   );
 }
@@ -33,7 +35,7 @@ function Checkout() {
     <div>
       <h2>Check Out</h2>
       <CheckoutForm />
-      <Link to="/confirm">Order Confirmation</Link>
+      <Link to="/confirm"><button className={buttonClasses}>Order Confirmation</button></Link>
     </div>
   );
 }
@@ -43,7 +45,7 @@ function Confirm() {
   <div>
     <h2>Order Confirmation</h2>
     <OrderConf />
-    <Link to="/">Home</Link>
+    <Link to="/"><button className={buttonClasses}>Home</button></Link>
   </div>
   );
 }
