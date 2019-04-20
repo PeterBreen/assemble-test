@@ -4,31 +4,6 @@
 //the cart has Product data and Quantity (qty * price = total cost)
 import React from 'react';
 
-class ShoppingCart extends React.Component {
-    render() {
-        return ( < div >
-          <
-          ul > {
-            cart.map(cart => < li key = {
-                cart.sku
-              } > {
-                cart.sku
-              } - {
-                cart.unitPrice
-              } - {
-                cart.name
-              } - {
-                cart.quantity
-              } < /li>)}</ul >
-              <
-              /div>
-            )
-          }
-
-        }
-
-export default ShoppingCart;
-
 //our data
 const cart = [{
   sku: 38094374,
@@ -46,3 +21,30 @@ const cart = [{
   name: "Blue socks",
   quantity: 4
 }]
+
+const calculateTotal = function(cart) {
+//this function is horribly inefficient, but it gets me a subtotal
+//todo if time - refactor to filter/reduce properly
+  let subtotalArr = []
+  cart.forEach(function(e) {
+    subtotalArr.push(e.unitPrice * e.quantity);
+  });
+  let subtotal = subtotalArr.reduce(function(a, b){return a+b;})
+  return subtotal;
+}
+
+class ShoppingCart extends React.Component {
+
+    render() {
+        return (
+          <div>
+            <ul>
+            {cart.map(cart => <li key={cart.sku} > {cart.sku} - {cart.unitPrice} - {cart.name} - {cart.quantity} < /li>)}
+            </ul>
+            <p>Subtotal: {calculateTotal(cart)}</p>
+          </div>
+            )
+    }
+}
+
+export default ShoppingCart;
