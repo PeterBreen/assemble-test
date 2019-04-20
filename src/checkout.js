@@ -1,4 +1,5 @@
 import React from 'react';
+import './checkout.css'
 
 //this component takes user-submitted billing and shipping info from formfields
 //these should be react controlled with state instead of just empty placeholders
