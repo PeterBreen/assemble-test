@@ -19,6 +19,7 @@ function App() {
 }
 
 const buttonClasses="btn btn-assemble allcaps float-right";
+const centerButton="btn btn-assemble allcaps center";
 
 function Review() {
   return (
@@ -41,9 +42,8 @@ function Checkout() {
 function Confirm() {
   return (
   <div>
-    <h2>Order Confirmation</h2>
     <OrderConf />
-    <Link to="/"><button className={buttonClasses}>Home</button></Link>
+    <Link to="/"><button className={centerButton}>Home</button></Link>
   </div>
   );
 }

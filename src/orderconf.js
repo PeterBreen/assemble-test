@@ -3,7 +3,7 @@ import React from 'react';
 class OrderConf extends React.Component {
   render() {
     return (
-      <p>I'm an order confirmation page!</p>
+      <div className="cartheader"><h4>Order complete!</h4></div>
     )
   }
 }
