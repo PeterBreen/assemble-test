@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ShoppingCart from './shoppingcart';
 
 function App() {
   return (
@@ -7,74 +8,50 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Review Your Order</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/billing">Billing/Shipping</Link>
           </li>
           <li>
-            <Link to="/topics">Topics</Link>
+            <Link to="/confirm">Order Confirmation</Link>
           </li>
         </ul>
 
         <hr />
 
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
+        <Route exact path="/" component={Review} />
+        <Route path="/billing" component={Billing} />
+        <Route path="/confirm" component={Confirm} />
       </div>
     </Router>
   );
 }
 
-function Home() {
+function Review() {
   return (
     <div>
-      <h2>Home</h2>
+      <h2>Review Your Order</h2>
+      <ShoppingCart />
     </div>
   );
 }
 
-function About() {
+function Billing() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>Billing/Shipping</h2>
     </div>
   );
 }
 
-function Topics({ match }) {
+function Confirm() {
   return (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
-
-      <Route path={`${match.path}/:topicId`} component={Topic} />
-      <Route
-        exact
-        path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
-      />
-    </div>
+  <div>
+    <h2>Order Confirmation</h2>
+  </div>
   );
 }
 
-function Topic({ match }) {
-  return (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  );
-}
 
 export default App;
