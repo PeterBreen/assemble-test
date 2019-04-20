@@ -5,7 +5,7 @@ import React from 'react';
 class CheckoutForm extends React.Component {
   render() {
     return (
-      <p>I'm a form!</p>
+      <p>I'm a checkout form page!</p>
     )
   }
 }

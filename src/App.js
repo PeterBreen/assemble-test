@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ShoppingCart from './shoppingcart';
 import CheckoutForm from './checkout';
+import OrderConf from './orderconf';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function Confirm() {
   return (
   <div>
     <h2>Order Confirmation</h2>
+    <OrderConf />
     <Link to="/">Home</Link>
   </div>
   );
