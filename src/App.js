@@ -1,29 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ShoppingCart from './shoppingcart';
+import CheckoutForm from './checkout';
 
 function App() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Review Your Order</Link>
-          </li>
-          <li>
-            <Link to="/billing">Billing/Shipping</Link>
-          </li>
-          <li>
-            <Link to="/confirm">Order Confirmation</Link>
-          </li>
-        </ul>
-
-        <hr />
-
         <Route exact path="/" component={Review} />
-        <Route path="/billing" component={Billing} />
+        <Route path="/checkout" component={Checkout} />
         <Route path="/confirm" component={Confirm} />
-      </div>
     </Router>
   );
 }
@@ -33,14 +18,17 @@ function Review() {
     <div>
       <h2>Review Your Order</h2>
       <ShoppingCart />
+      <Link to="/checkout">Check Out</Link>
     </div>
   );
 }
 
-function Billing() {
+function Checkout() {
   return (
     <div>
-      <h2>Billing/Shipping</h2>
+      <h2>Check Out</h2>
+      <CheckoutForm />
+      <Link to="/confirm">Order Confirmation</Link>
     </div>
   );
 }
@@ -49,6 +37,7 @@ function Confirm() {
   return (
   <div>
     <h2>Order Confirmation</h2>
+    <Link to="/">Home</Link>
   </div>
   );
 }
