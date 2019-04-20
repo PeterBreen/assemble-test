@@ -17,9 +17,9 @@ function App() {
     </Router>
   );
 }
-
+/*todo if time: this is so dumb, don't repeat all these just to avoid the float */
 const buttonClasses="btn btn-assemble allcaps float-right";
-const centerButton="btn btn-assemble allcaps center";
+const buttonNoPosition="btn btn-assemble allcaps";
 
 function Review() {
   return (
@@ -43,7 +43,7 @@ function Confirm() {
   return (
   <div>
     <OrderConf />
-    <Link to="/"><button className={centerButton}>Home</button></Link>
+    <div className="center"><Link to="/"><button className={buttonNoPosition}>Go Home</button></Link></div>
   </div>
   );
 }

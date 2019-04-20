@@ -3,7 +3,6 @@
 //each product has associated info: SKU, Price, name
 //the cart has Product data and Quantity (qty * price = total cost)
 import React from 'react';
-import './shoppingcart.css'
 
 //our data
 const cart = [{

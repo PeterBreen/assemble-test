@@ -26,11 +26,15 @@ button.btn-assemble:hover {
   margin-top: 1rem;
   padding-bottom: 2rem;
 }
+.confirm-text {
+  padding-bottom: 2rem;
+}
 
 /* helper classes to avoid redeclaring repeatedly */
 .allcaps {
   text-transform: uppercase;
 }
 .center {
+  text-align: center;
   margin: 0 auto;
 }
