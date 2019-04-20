@@ -47,6 +47,11 @@ function ShippingAddr() {
     <label>Name
     <input type="text" placeholder="Full Name"></input>
     </label>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+
     </div>
   )
 }
@@ -61,8 +66,7 @@ class CheckoutForm extends React.Component {
         </div>
         <div className="col-6">
           <ShippingAddr />
-            <input type="checkbox" id="sameas" />
-            <label for="sameas">Billing address same as shipping</label>
+            <label for="sameas"><input type="checkbox" id="sameas" /> Billing address same as shipping</label>
         </div>
       </div>
     </div>
